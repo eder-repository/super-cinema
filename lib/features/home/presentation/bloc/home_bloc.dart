@@ -10,16 +10,17 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<OnChangeIndex>(_onCahngeIndex);
   }
   late PageController _controller;
-  final ValueNotifier<double> _page = ValueNotifier(1.0);
+  final ValueNotifier<int> _page = ValueNotifier(1);
 
   PageController get pageController => _controller;
-  double get value => _page.value;
+  ValueNotifier<int> get selected => _page;
 
   void init() {
-    _controller = PageController(initialPage: 3, viewportFraction: .5);
+    _controller = PageController(initialPage: 1, viewportFraction: .5);
   }
 
   void _onCahngeIndex(OnChangeIndex event, Emitter<HomeState> emit) {
+    _page.value = event.index!;
     emit(state.copyWith(index: event.index!, value: _controller.page));
   }
 

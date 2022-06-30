@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:super_cinema/core/navigation/routes.dart';
 import 'package:super_cinema/core/shared/widgets/rounded_button.dart';
 import 'package:super_cinema/core/utils/constans.dart';
 import 'package:super_cinema/core/utils/models/movie.dart';
@@ -179,7 +180,9 @@ class Detail extends StatelessWidget {
                   const _TrailerAbout(),
                   const _TitleSubtitle(),
                   const _AnioGender(),
-                  RoundedButton(text: 'Buy Tickets', onTap: () {}),
+                  RoundedButton(
+                      text: 'Buy Tickets',
+                      onTap: () => Navigator.pushNamed(context, AppRoutes.buy)),
                   const Authors()
                 ],
               ),
@@ -228,7 +231,6 @@ class _TitleSubtitle extends StatelessWidget {
     return BlocSelector<HomeBloc, HomeState, int>(
       selector: (state) => state.index,
       builder: (_, index) {
-        print(index);
         final movie = movies[index];
         return Text(
           '${movie.title.toUpperCase()}:\n${movie.subtitle.toUpperCase()}',
