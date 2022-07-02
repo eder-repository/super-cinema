@@ -25,10 +25,10 @@ super cinemas application with movie scroll and seat selection made with flutter
 <table>
   <tr>
   <td> Details </td>
-  <iframe src="https://giphy.com/embed/Acd11xz4sMo6Jenahk" width="222" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Acd11xz4sMo6Jenahk">via GIPHY</a></p>
+  
   </tr>
   <tr>
-  <td><img src="https://giphy.com/embed/Acd11xz4sMo6Jenahk" width="222" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></img></td>
+  <td><img src="https://media.giphy.com/media/Acd11xz4sMo6Jenahk/giphy.gif" width="222" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></img></td>
 
   </tr>
   </table>
